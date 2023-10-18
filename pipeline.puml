@@ -1,0 +1,84 @@
+@startuml
+
+Rectangle  #BlueViolet {
+
+
+archimate #White " DEVELOPERS " as dev <<application-service>>
+archimate #White "   SVM  " as sv <<application-service>>
+archimate #White " BUILD & TEST " as bul <<application-service>>
+archimate #White " CONTAINERS " as con <<application-service>>
+archimate #White " CONTINUOUS \n   TESTING  " as cont <<application-service>>
+archimate #White " DEPLOY          " as dep <<application-service>>
+archimate #White "         CHATOPG " as chatopg <<application-service>>
+
+
+dev -right---> sv
+sv -right-> bul
+bul -right----> con
+con -right-> cont
+cont -right-> dep
+dep -right-> chatopg
+
+archimate #White " Post Pull Request \n Notification in chat \n Room " as pull <<application-process>>
+
+
+archimate #White " Build Docker \n Image " as docker <<application-service>>
+archimate #White "          Tag Docker \n Image           " as tagdocker <<application-service>>
+archimate #White " Push Docker Image \n To Registr " as Pushdocker <<application-service>>
+
+archimate #White " Unit Test " as ut <<application-service>>
+archimate #White " Static Code \n Coverage " as sta <<application-service>>
+archimate #White " Archieve Artifact " as aa <<application-service>>
+archimate #White " Library Security \n License Analysis " as lib <<application-service>>
+archimate #White " Publish Unit Test \n Report " as pub <<application-service>>
+archimate #White " Public Static Code \n Coverage Analysis \n Report  " as psc <<application-service>>
+
+
+archimate #White " Database \n Migration" as migrane<<application-component>>
+archimate #White " Deploy Container \n           To CI" as deploy1 <<application-component>>
+archimate #White " Run Integration Test" as run<<application-component>>
+archimate #White " Perform Security/\n  Load Testing" as testing<<application-component>>
+archimate #White " Publish integration \n Load/Security \n Testing Report" as publish<<application-component>>
+
+
+
+archimate #White " Checkout Code \n Load jenkinsfile" as staticcode <<application-component>>
+archimate #White "     Comple   " as comple<<application-component>>
+
+
+archimate #White "Deploy" as dep<<application-component>>
+archimate #White "Expression" as exp<<application-component>>
+archimate #White "Deploy to \n Environment Based \n on Expression " as environment<<application-component>>
+
+archimate #White "Post Build \n Status Chat " as postbuild <<application-service>>
+archimate #White "Email Build " as email  <<application-service>>
+
+
+sv ---> [pull]
+bul --> [staticcode]
+staticcode --> [comple]
+
+comple -right-> sta
+sta -right-> psc
+ut -right-> pub
+ut -right-> sta
+sta -right-> aa
+aa -down-> lib
+
+cont --> [migrane]
+migrane --> [deploy1]
+deploy1 --> [testing]
+testing --> [run]
+run --> [publish]
+dep --> [exp]
+exp --> [environment]
+chatopg --> [postbuild]
+postbuild --> [email]
+con --> [docker]
+docker --> [tagdocker]
+tagdocker --> [Pushdocker]
+
+}
+
+
+@enduml
