@@ -50,16 +50,14 @@ Docsify is a documentation site generator that allows you to create beautiful, s
 ```
 sudo apt update
 ```
-
-![Alt text](../Deeksha/upload/update1.png)
+![Alt text](images/1.png)
 
 ### STEP 2 - Podman Installation 
 
 ```
  sudo apt-get install -y podman
 ```
-
-![Alt text](../Deeksha/upload/podman.png)
+![Alt text](images/2.png)
 
 
  **- sudo:** This part of the command is like saying "I want to do something important." It stands for "superuser do" and allows you to perform tasks that affect your computer's system, like installing software.
@@ -105,8 +103,7 @@ sudo apt  install curl
 ```
  podman --version
 ```
-
-![Alt text](../Deeksha/upload/Checkpodmanversion.png)
+![Alt text](images/3.png)
 
 **- podman:**  This is the name of the program or tool 
 
@@ -256,69 +253,57 @@ This command is used to check the running and not running container
 
 -  Create a github  account and make a repository. To create a GitHub account Go to https://github.com/ Click on "Sign up" and follow the prompts to create your account then  Login github 
  .
-
-![Alt text](login.png)
+![Alt text](images/16.png)
 
 ### STEP :2  
 
 #### Create GitHub Repository
-
-![Alt text](repo.png)
+![Alt text](images/17.png)
 
 - Choose a name for your repository. Then Write a short description about your project or documentation. Choose whether the repository should be public or private. Then click create a repository.
-![Alt text](newrepo.png)
 
-
+![Alt text](images/18.png)
 
 ## STEP :3 
 #### create a new repository on the command line
 
 - **git init** :- "git init" is like setting up a magic box that remembers all the changes you make to your files, so you can easily go back and see what you did later.
-
-![Alt text](image.png)
+![Alt text](images/19.png)
 
 - **git add README.md** :-  Command is used to tell Git that you want to include the changes you've made to the README.md file
-
-![Alt text](<git add.png>)
+![Alt text](images/20.png)
 
 - **git commit -m "first commit"** :-  Is like saving your work and adding a quick note to remember what you did. It's like taking a snapshot and writing a caption for it.
-
-![Alt text](gitcommit.png)
+![Alt text](images/21.png)
 
 - **git branch -M master** :-  (git branch) This tells Git you want to work with branches, which are different versions of your project.(M) This is a flag that means you're renaming or moving a branch.(master) This is the name of the branch you're renaming. In Git, "master" is often the default starting point.
-
-![Alt text](<branch master.png>)
+![Alt text](images/22.png)
 
 - **git remote add origin <https://github.com/Deeksha115/deeksha05.git>** :- This command is saying, "Git, I want to connect my local project to a place on GitHub called 'origin' using this web address.
 
+![Alt text](images/23.png)
 
-![Alt text](clone.png)
-
+![Alt text](images/23.1.png)
 ### STEP : 4
 #### Generate a token to be used as a password when executing the git push -u origin master command.
 
 - Open setting
-
-![Alt text](setting.png)
+![Alt text](images/24.jpeg)
 
 - Select Developer settings
-
-![Alt text](<developer setting.png>)
+![Alt text](images/25.png)
 
 - Select Personal access token (Classic version)
-
-![Alt text](token.png)
+![Alt text](images/26.jpeg)
 
 - Click generate new token
+![Alt text](images/27.png)
 
-![Alt text](<new token.png>)
-!
 
 ## STEP :5 
 #### Clone the Repository
 
 - **git push -u origin master** :- Is like sending your local work to your online project's home on GitHub. It's a way to share your changes and keep everything in sync. The -u part helps set up a connection for next time.
+![Alt text](images/28.png)
 
-![Alt text](push.png)
-
-![Alt text](last.png)
+![Alt text](images/29.png)
