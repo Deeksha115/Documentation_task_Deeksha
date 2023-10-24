@@ -2,10 +2,10 @@
 # <p style="text-align: center;"> DOCSIFY SETUP IN PODMAN AND  INTEGRATION WITH GITHUB</p> 
 
 
-Docsify is a lightweight, flexible, and easy-to-set-up documentation generator that can turn your Markdown documentation into a website.
 
 
-
+## Introduction 
+Docsify is a documentation site generator that allows you to create beautiful, searchable documentation websites using Markdown files.
 
 
 
@@ -34,14 +34,16 @@ Docsify is a lightweight, flexible, and easy-to-set-up documentation generator t
 
 ## What is Podman 
 
-* The full form of podman is pod manager tool and that's why the name is  podman 
-* The name pods  came from the kubonities.  Collection of containers or Grouping of containers are called as pods
+* The podman is pod manager tool and that's why the name is podman
+* The name pods came from the kubonities. Collection of containers or Grouping of containers are called as pods
+* The main reason for creating podman is to lavering the concept of pods where u have two containers run together mostly called them as a side car pattern . So We can use podman to run two different containers together.
 
-* The main reason for creating podman is to lavering the concept of pods  where u have two containers run together mostly called them as a side car patterns . Soo We can use podman to run  two different containers together.
 
 ## What is Github
 
-GitHub is an online software development platform. It's used for storing, tracking, and collaborating on software projects.
+* GitHub is an online software development platform. It's used for storing, tracking, and collaborating on software projects.
+* Github is an Version Control system 
+
 
 ### STEP 1 - Update Your System
 
@@ -49,8 +51,7 @@ GitHub is an online software development platform. It's used for storing, tracki
 sudo apt update
 ```
 
-
-![Alt text](update1.png)
+![Alt text](../Deeksha/upload/update1.png)
 
 ### STEP 2 - Podman Installation 
 
@@ -58,7 +59,8 @@ sudo apt update
  sudo apt-get install -y podman
 ```
 
-![Alt text](podman.png)
+![Alt text](../Deeksha/upload/podman.png)
+
 
  **- sudo:** This part of the command is like saying "I want to do something important." It stands for "superuser do" and allows you to perform tasks that affect your computer's system, like installing software.
 
@@ -68,6 +70,35 @@ sudo apt update
 
 **- -y:**  The -y is like saying, "Yes, go ahead!" It tells the magic tool to answer "Yes" to any questions it might ask during the installation, so you don't have to type "Yes" manually.
 
+# Note:-
+### If you have not installed podman so you can use these command given below ➖
+
+```
+# echo "deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_20.04/ /" | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list
+
+
+sudo apt  install curl
+
+# curl -L "https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_20.04/Release.key" -o Release.key
+
+
+
+
+# file Release.key
+
+
+# sudo apt-key add Release.key
+
+
+# curl -L "https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu20.04/Release.key" | gpg --dearmor -o /usr/share/keyrings/devel-kubic-libcontainers-stable.gpg
+
+
+
+# sudo apt update
+# sudo apt install podman
+
+
+```
 
 ### STEP 3 - Check Podman Version
 
@@ -75,7 +106,7 @@ sudo apt update
  podman --version
 ```
 
-![Alt text](Checkpodmanversion.png)
+![Alt text](../Deeksha/upload/Checkpodmanversion.png)
 
 **- podman:**  This is the name of the program or tool 
 
@@ -87,9 +118,16 @@ sudo apt update
 ```
  mkdir Directory
 ```
-![Alt text](<create folder.png>)
+![Alt text](images/4.png)
+
 
 **- mkdir:**  This is a command that stands for "make directory." It tells your computer that you want to create a new folder.
+
+after creating a Directory name which is docsify and enter in the directory with command given below 
+
+```
+ls directory namae 
+```
 
 ### STEP 5 - Create File In Directory
 
@@ -98,8 +136,7 @@ touch index.html
 touch Dockerfile
 touch README.md
 ```
-
-![Alt text](createfile.png)
+![Alt text](images/5.png)
 
 **- touch:**  This is a command that tells your computer to create a new file.
 ### STEP 6 - Open/Edit and paste the index.html syntex 
@@ -107,8 +144,7 @@ touch README.md
 ```
  vim index.html
 ```
-
-![Alt text](<vim index.html.png>)
+![Alt text](images/6.png)
 
 ```
 <!DOCTYPE html>
@@ -133,17 +169,14 @@ touch README.md
   </body>
 </html>
 ```
-
-![Alt text](vimindex.png)
-
+![Alt text](images/7.png)
 **- vim:**  This is the command to launch the Vim text editor.
 ### STEP 7 - Open/Edit and paste the Dockerfile 
 
 ```
  vim Dockerfile
 ```
-
-![Alt text](vimdockerfile.png)
+![Alt text](images/8.png)
 
 ```
 FROM node:latest
@@ -154,8 +187,7 @@ FROM node:latest
   ENTRYPOINT docsify serve .
 
 ```
-
-![Alt text](filldocs.png)
+![Alt text](images/9.png)
 
 ### STEP 8 - This file is used to show the information about project 
 
@@ -163,10 +195,7 @@ FROM node:latest
  vim README.md
 
 ```
-
-![Alt text](<vim Readme.md.png>)
-
-![Alt text](HELLO.png)
+![Alt text](images/10.png)
 
 ### STEP 9 - Podman build image
 
@@ -174,8 +203,7 @@ FROM node:latest
  podman build -f Docerfile -t docsify/demo.
 
 ```
-
-![Alt text](<podman build.png>)
+![Alt text](images/12.png)
 
 **- Podman build image"** in simple words means creating a container image using Podman, which is a tool for managing containers (like virtualized software environments). Here's a breakdown:
 
@@ -191,29 +219,36 @@ FROM node:latest
  podman run -d -p 3000:3000 -v/home/deeksha/Mydocs:/docs localhost/docsify/demo
 
 ```
-
-![Alt text](demo.png)
+![Alt text](images/13.png)
 
 **- run:**  This part of the command tells Podman that you want to start and run a container with a specific image.
 
 ### STEP 11 - Container Check 
+This command is used to check the running  container 
 
 ```
+podman ps 
+```
+![Alt text](images/14.1.png)
 
+
+
+This command is used to check the running and not running container 
+
+```
  podman ps -a
-
   ```
+![Alt text](images/14.png)
 
- ![Alt text](container1.png)
 
 **- ps:** This stands for "process status." It's a command that helps you see information about the programs and tasks currently running on your computer.
 
 **-a:**  This is an option or flag that you add to the "ps" command. It tells "ps" to display information about all processes, not just the ones associated with your current terminal session.
 
+
 ### STEP 12 - Preview  
 
-`
-![Alt text](preview.png)
+`![Alt text](images/15.png)
 
 ##  GITHUB 
 
