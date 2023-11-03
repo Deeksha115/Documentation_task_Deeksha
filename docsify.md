@@ -34,8 +34,8 @@
 
 ## Podman 
 
-* The podman is pod manager tool and that's why the name is podman
-* The name pods came from the Kubernetes.Collection of containers or Grouping of containers are called as pods
+* The podman is pod manager tool and that's why the name is podman.
+* pods is a Collection of containers or Grouping of containers.
 * The main reason for creating podman is to lavering the concept of pods where you have two containers run together mostly called them as a side car pattern . So we can use podman to run two different containers together.
 
 
