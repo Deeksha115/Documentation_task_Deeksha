@@ -82,7 +82,7 @@ $ sudo apt install -y podman
 $ podman --version
 
 ```
-
+## Output
 ![Alt text](images/2.png)
 
  **- sudo:** This part of the command is like saying "I want to do something important." It stands for "superuser do" and allows you to perform tasks that affect your computer's system, like installing software.
