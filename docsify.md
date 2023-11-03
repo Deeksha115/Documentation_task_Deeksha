@@ -51,6 +51,7 @@
 ```
 sudo apt update
 ```
+## Output 
 ![Alt text](images/1.png)
 
 ### Step 2 - Podman Installation 
@@ -98,6 +99,7 @@ $ podman --version
 ```
  podman --version
 ```
+## Output
 ![Alt text](images/3.png)
 
 **- podman:**  This is the name of the program or tool 
@@ -110,6 +112,7 @@ $ podman --version
 ```
  mkdir docsify
 ```
+## Output
 ![Alt text](images/4.png)
 
 
@@ -131,6 +134,8 @@ touch index.html
 touch Dockerfile
 touch README.md
 ```
+
+## Output
 ![Alt text](images/5.png)
 
 **- touch:** This is a command that tells your computer to create a new file.
@@ -148,6 +153,7 @@ ls
 sudo apt install vim
 
 ```
+## Output
 ![Alt text](images/6.1.png)
 
 **-vim:** This is the command to launch the Vim text editor.
@@ -155,6 +161,7 @@ sudo apt install vim
 ```
  vim index.html
 ```
+## Output
 ![Alt text](images/6.png)
 
 ```
@@ -180,6 +187,7 @@ sudo apt install vim
   </body>
 </html>
 ```
+## Output
 ![Alt text](images/7.png)
 **- vim:**  This is the command to launch the Vim text editor.
 ### Step 7 - Open/Edit and paste the Dockerfile 
@@ -187,6 +195,8 @@ sudo apt install vim
 ```
  vim Dockerfile
 ```
+## Output
+
 ![Alt text](images/8.png)
 
 ```
@@ -198,6 +208,7 @@ FROM node:latest
   ENTRYPOINT docsify serve .
 
 ```
+## Output
 ![Alt text](images/9.png)
 
 ### Step 8 - This file is used to show the information about project 
@@ -206,6 +217,7 @@ FROM node:latest
  vim README.md
 
 ```
+## Output
 ![Alt text](images/10.png)
 
 
@@ -219,6 +231,8 @@ FROM node:latest
  podman build -f Dockerfile -t docsify/demo .
 
 ```
+## Output
+
 ![Alt text](images/12.png)
 
 **- Podman build image"** in simple words means creating a container image using Podman, which is a tool for managing containers (like virtualized software environments). Here's a breakdown:
@@ -235,6 +249,7 @@ FROM node:latest
 podman run -d -p 3000:3000 -v/home/deeksha/docsify:/docs localhost/docsify/demo
 
 ```
+## Output
 ![Alt text](images/13.png)
 
 **- run:**  This part of the command tells Podman that you want to start and run a container with a specific image.
@@ -245,10 +260,14 @@ podman run -d -p 3000:3000 -v/home/deeksha/docsify:/docs localhost/docsify/demo
 ```
 podman ps 
 ```
+## Output
+
 ![Alt text](images/14.1.png)
 This command is used to check the running  container 
 
 ### Step 12 - Preview  
+
+## Output
 
 ![Alt text](images/15.png)
 
