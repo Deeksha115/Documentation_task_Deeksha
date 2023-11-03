@@ -253,7 +253,7 @@ This command is used to check the running  container
 ![Alt text](images/15.png)
 
 - localhost:3000/
-- Your system IP address
+
 
 ##  GITHUB 
 
@@ -286,7 +286,11 @@ This command is used to check the running  container
 
 #### Generate a token to be used as a password when executing the git push -u origin master command.
 - Open setting
+
+- 
 ![Alt text](images/24.jpeg)
+
+
 
 ##### Go to the Developer settings
 ![Alt text](images/25.png)
