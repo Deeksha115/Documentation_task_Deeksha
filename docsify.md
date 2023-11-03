@@ -34,7 +34,7 @@
 
 - [Github_interagation](#Githubinteragation)
 
-## What is Podman 
+## Podman 
 
 * The podman is pod manager tool and that's why the name is podman
 * The name pods came from the Kubernetes.Collection of containers or Grouping of containers are called as pods
@@ -42,20 +42,20 @@
 
 
 
-## What is Github
+## Github
 
 * GitHub is an online software development platform. It's used for storing, tracking, and collaborating on software projects.
-* Github is an Version Control system 
+* Github is an website that allows developers to store and manage their code.
 
 
-### STEP 1 - Update Your System
+### Step 1 - Update Your System
 
 ```
 sudo apt update
 ```
 ![Alt text](images/1.png)
 
-### STEP 2 - Podman Installation 
+### Step 2 - Podman Installation 
 
 ```
  sudo apt-get install -y podman
@@ -95,7 +95,7 @@ $ podman --version
 
 **- -y:**  The -y is like saying, "Yes, go ahead!" It tells the magic tool to answer "Yes" to any questions it might ask during the installation, so you don't have to type "Yes" manually.
 
-### STEP 3 - Check Podman Version
+### Step 3 - Check Podman Version
 
 ```
  podman --version
@@ -107,7 +107,7 @@ $ podman --version
 
 **- When you run podman --version,** Podman responds by showing you a number (e.g., "2.2.1"). This number represents the version of Podman that's currently installed. Knowing the version is helpful because different versions might have different features or behave in slightly different ways, so it's useful information if you're troubleshooting or working with Podman.
 
-### STEP 4 - Create a Directory
+### Step 4 - Create a Directory
 
 ```
  mkdir docsify
@@ -126,7 +126,7 @@ cd docsify
 **- cd:**  This command is used to enter the directory 
 
 
-### STEP 5 - Create File In Directory
+### Step 5 - Create File In Directory
 
 ```
 touch index.html
@@ -184,7 +184,7 @@ sudo apt install vim
 ```
 ![Alt text](images/7.png)
 **- vim:**  This is the command to launch the Vim text editor.
-### STEP 7 - Open/Edit and paste the Dockerfile 
+### Step 7 - Open/Edit and paste the Dockerfile 
 
 ```
  vim Dockerfile
@@ -202,7 +202,7 @@ FROM node:latest
 ```
 ![Alt text](images/9.png)
 
-### STEP 8 - This file is used to show the information about project 
+### Step 8 - This file is used to show the information about project 
 
 ```
  vim README.md
@@ -211,10 +211,10 @@ FROM node:latest
 ![Alt text](images/10.png)
 ![Alt text](images/11.png)
 
-### STEP 9 - Podman build image
+### Step 9 - Podman build image
 
 ```
- podman build -f Docerfile -t docsify/demo .
+ podman build -f Dockerfile -t docsify/demo .
 
 ```
 ![Alt text](images/12.png)
@@ -237,7 +237,7 @@ podman run -d -p 3000:3000 -v/home/deeksha/docsify:/docs localhost/docsify/demo
 
 **- run:**  This part of the command tells Podman that you want to start and run a container with a specific image.
 
-### STEP 11 - Container Check 
+### Step 11 - Container Check 
 
 
 ```
@@ -246,7 +246,7 @@ podman ps
 ![Alt text](images/14.1.png)
 This command is used to check the running  container 
 
-### STEP 12 - Preview  
+### Step 12 - Preview  
 
 ![Alt text](images/15.png)
 
