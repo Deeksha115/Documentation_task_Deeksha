@@ -207,7 +207,11 @@ FROM node:latest
 
 ```
 ![Alt text](images/10.png)
+
+
 ![Alt text](images/11.png)
+
+
 
 ### Step 9 - Podman build image
 
