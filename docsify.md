@@ -47,7 +47,6 @@
 ```
 sudo apt update
 ```
-## Output 
 
 ![Alt text](images/1.png)
 
@@ -59,12 +58,6 @@ sudo apt update
  sudo apt-get install -y podman
 ```
 
-
-
-#### Note:- If you have not installed podman so you can use these command given below ➖
-
-
-## Output
 
 ![Alt text](images/2.png)
 
@@ -81,7 +74,6 @@ sudo apt update
 ```
  podman --version
 ```
-## Output
 
 ![Alt text](images/3.png)
 
@@ -96,7 +88,6 @@ sudo apt update
  mkdir docsify
 ```
 
-## Output
 
 ![Alt text](images/4.png)
 
@@ -121,7 +112,6 @@ touch Dockerfile
 touch README.md
 ```
 
-## Output
 
 ![Alt text](images/5.png)
 
