@@ -328,9 +328,12 @@ This command is used to check the running  container
 
 ![Alt text](images/33.png)
 
+
 #### After select the boxes as per your needed 
 
+
 ##### click the generate token 
+
 
 ![Alt text](images/31.png)
 
