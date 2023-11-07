@@ -51,6 +51,8 @@ sudo apt update
 
 ![Alt text](images/1.png)
 
+ When you run this command, your system checks for new software updates and packages from the internet
+ 
 ### Step 2 - Podman Installation 
 
 ```
