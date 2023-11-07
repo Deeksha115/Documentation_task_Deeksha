@@ -1,8 +1,4 @@
-
 # <p style="text-align: center;"> DOCSIFY SETUP IN PODMAN AND  INTEGRATION WITH GITHUB</p> 
-
-
-
 
 ## Introduction 
 
@@ -52,6 +48,7 @@
 sudo apt update
 ```
 ## Output 
+
 ![Alt text](images/1.png)
 
 ### Step 2 - Podman Installation 
@@ -64,26 +61,9 @@ sudo apt update
 
 #### Note:- If you have not installed podman so you can use these command given below ➖
 
-```
-$ sudo sh -c "echo 'deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_$(lsb_release -rs)/ /' > /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list"
 
-
-$ wget https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_$(lsb_release -rs)/Release.key
-
-
-$ sudo apt-key add - < Release.key
-
-
-$ sudo apt update
-
-
-$ sudo apt install -y podman
-
-
-$ podman --version
-
-```
 ## Output
+
 ![Alt text](images/2.png)
 
  **- sudo:** This part of the command is like saying "I want to do something important." It stands for "superuser do" and allows you to perform tasks that affect your computer's system, like installing software.
@@ -100,6 +80,7 @@ $ podman --version
  podman --version
 ```
 ## Output
+
 ![Alt text](images/3.png)
 
 **- podman:**  This is the name of the program or tool 
@@ -112,7 +93,9 @@ $ podman --version
 ```
  mkdir docsify
 ```
+
 ## Output
+
 ![Alt text](images/4.png)
 
 
@@ -124,6 +107,7 @@ after creating a Directory name which is docsify and enter in the directory with
 ```
 cd docsify 
 ```
+
 **- cd:**  This command is used to enter the directory 
 
 
@@ -136,6 +120,7 @@ touch README.md
 ```
 
 ## Output
+
 ![Alt text](images/5.png)
 
 **- touch:** This is a command that tells your computer to create a new file.
@@ -148,12 +133,15 @@ ls
 ### STEP 6 - Open/Edit and paste the index.html syntex 
 
 ## Debian/Ubuntu:
+
  Use apt to install Vim:
+
 ```
 sudo apt install vim
 
 ```
 ## Output
+
 ![Alt text](images/6.1.png)
 
 **-vim:** This is the command to launch the Vim text editor.
@@ -162,6 +150,7 @@ sudo apt install vim
  vim index.html
 ```
 ## Output
+
 ![Alt text](images/6.png)
 
 ```
@@ -188,8 +177,11 @@ sudo apt install vim
 </html>
 ```
 ## Output
+
 ![Alt text](images/7.png)
+
 **- vim:**  This is the command to launch the Vim text editor.
+
 ### Step 7 - Open/Edit and paste the Dockerfile 
 
 ```
@@ -209,6 +201,7 @@ FROM node:latest
 
 ```
 ## Output
+
 ![Alt text](images/9.png)
 
 ### Step 8 - This file is used to show the information about project 
@@ -218,6 +211,7 @@ FROM node:latest
 
 ```
 ## Output
+
 ![Alt text](images/10.png)
 
 
@@ -231,6 +225,7 @@ FROM node:latest
  podman build -f Dockerfile -t docsify/demo .
 
 ```
+
 ## Output
 
 ![Alt text](images/12.png)
@@ -250,6 +245,7 @@ podman run -d -p 3000:3000 -v/home/deeksha/docsify:/docs localhost/docsify/demo
 
 ```
 ## Output
+
 ![Alt text](images/13.png)
 
 **- run:**  This part of the command tells Podman that you want to start and run a container with a specific image.
@@ -260,9 +256,11 @@ podman run -d -p 3000:3000 -v/home/deeksha/docsify:/docs localhost/docsify/demo
 ```
 podman ps 
 ```
+
 ## Output
 
 ![Alt text](images/14.1.png)
+
 This command is used to check the running  container 
 
 ### Step 12 - Preview  
@@ -283,6 +281,7 @@ This command is used to check the running  container
 #### Login to the github 
 
  .
+
 ![Alt text](images/16.png)
 
 
@@ -306,30 +305,39 @@ This command is used to check the running  container
 #### Generate a token to be used as a password when executing the git push -u origin master command.
 - Open setting
 
-- 
 ![Alt text](images/24.jpeg)
 
 
 
 ##### Go to the Developer settings
+
 ![Alt text](images/25.png)
 
 #### Select Personal access token (Classic version)
+
 ![Alt text](images/26.jpeg)
 
 
 #### And tap Token (classic)
+
 ![Alt text](images/27.1.png)
+
 #### Go to the right side and click generate new token
+
 ![Alt text](images/27.png)
 
+
 #### Now  generate new token(classic)
+
 ![Alt text](images/27.png)
 
 
 #### you have to give the name and expire date of your token and select the boxes 
+
 ![Alt text](images/33.png)
+
 #### After select the boxes as per your needed 
+
 ##### click the generate token 
 
 ![Alt text](images/31.png)
@@ -341,26 +349,32 @@ This command is used to check the running  container
 #### create a new repository on the command line
 
 - **git init** :- "git init" is like setting up a magic box that remembers all the changes you make to your files, so you can easily go back and see what you did later.
+
 ![Alt text](images/19.png)
 
 - **git add README.md** :-  Command is used to tell Git that you want to include the changes you've made to the README.md file
+
 ![Alt text](images/20.png)
 
 - **git commit -m "first commit"** :-  Is like saving your work and adding a quick note to remember what you did. It's like taking a snapshot and writing a caption for it.
+
 ![Alt text](images/21.png)
 
 - **git branch -M master** :-  (git branch) This tells Git you want to work with branches, which are different versions of your project.(M) This is a flag that means you're renaming or moving a branch.(master) This is the name of the branch you're renaming. In Git, "master" is often the default starting point.
+
 ![Alt text](images/22.png)
 
 - **git remote add origin <https://github.com/Deeksha115/deeksha_.docsify.git>** :- This command is saying, "Git, I want to connect my local project to a place on GitHub called 'origin' using this web address.
 
 ![Alt text](images/23.png)
+
 ![Alt text](images/29.png)
 
 
 
 
 - **git push -u origin master** :- Is like sending your local work to your online project's home on GitHub. It's a way to share your changes and keep everything in sync. The -u part helps set up a connection for next time.
+
 ![Alt text](images/28.png)
 
 
@@ -370,6 +384,7 @@ This command is used to check the running  container
 - Password : (token id)
 
 ![Alt text](images/32.png)
+
 #### You can see your all file in master branch 
 
 #### Reference link : https://docsify.js.org/#/?id=docsify
